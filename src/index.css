@@ -12,8 +12,8 @@ code {
     monospace;
 }
 
-a{
+/* this is to override the link component in the css file */
+a{ 
   text-decoration: none;
-  color: black;
-  
+  color: black; 
 }
