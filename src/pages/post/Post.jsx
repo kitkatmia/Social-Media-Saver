@@ -17,6 +17,7 @@ const Post = () => {
             message: message,
             author: auth.currentUser.displayName,
             likes: 0,
+            uid: auth.currentUser.uid,
         })
 
         setMessage('')

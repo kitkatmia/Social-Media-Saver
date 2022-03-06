@@ -13,6 +13,7 @@ const Home = () => {
                 <br />
                 <br />
                 <button><Link to='feed'>View Stellar Feed</Link></button>
+
             </center>
         </>
     )

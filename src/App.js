@@ -18,7 +18,8 @@ const App = () => {
 
   return (
     <>
-      {user ? <Source /> : <Login />}
+      {loading ? <center><h1>Loading....</h1></center> : error ? <center><h1>An error has occured! Refresh?</h1></center> : user ? <Source /> : <Login />}
+      {/* if loading show Loading... else if there is an error show error else if user not logged in log in */}
       {/* if a user is present allow them to access the source page otherwise allow them to login */}
     </>
   );

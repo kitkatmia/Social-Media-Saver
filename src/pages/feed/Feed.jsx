@@ -1,7 +1,7 @@
 import './feed.css'
 import { useState, useEffect } from 'react'
 //functions provided by firebase to get data from firestore
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, deleteDoc, getDocs, getFirestore, doc} from "firebase/firestore";
 
 //compoentn we created to render indiviual posts given data
 import SingularPost from '../../components/singularPost/SingularPost'
@@ -46,6 +46,15 @@ const Feed = () => {
 
     }, [db])
 
+
+    const handleDelete = async (id) => {
+        const deletedDocRef = doc(db, 'feed', id)
+        await deleteDoc(deletedDocRef);
+
+        setFeedArray((currentValue) => currentValue.filter((item) => item.id !== id))
+    }
+
+
     return (
         <>
             <center>
@@ -57,7 +66,7 @@ const Feed = () => {
 
                         return (
                             <span key={index}>
-                                <SingularPost docStuff={post} />
+                                <SingularPost deleteFunction={handleDelete} docStuff={post} />
                                 <br />
                             </span>
                         )
