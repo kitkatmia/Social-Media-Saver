@@ -12,8 +12,10 @@ code {
     monospace;
 }
 
-/* this is to override the link component in the css file */
+/* this is to override the link component in the css file; this code affects the buttons on the home page */
 a {
   text-decoration: none;
-  color: black;
+  background-image: linear-gradient(to right, #D1CCFF, #FFB7B9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

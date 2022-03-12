@@ -42,11 +42,9 @@ const Feed = () => {
         //calls the getData function
         getData();
 
-
-
     }, [db])
 
-
+    
     const handleDelete = async (id) => {
         const deletedDocRef = doc(db, 'feed', id)
         await deleteDoc(deletedDocRef);
