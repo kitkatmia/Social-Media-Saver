@@ -27,7 +27,7 @@ div {
     letter-spacing: 1px;
     padding: 0;
     margin: 0;
-    animation: Gradient 50s ease infinite;
+    animation: Gradient 30s ease infinite;
     text-decoration: none;
 }
 
