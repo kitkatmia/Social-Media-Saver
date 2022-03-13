@@ -1,7 +1,10 @@
 import './home.css'
 import { Link } from 'react-router-dom'
+import { getAuth } from 'firebase/auth';
+
 //loads the home page
 const Home = () => {
+    const auth = getAuth();
     return (
         <>
             {/* center the page */}
@@ -13,6 +16,9 @@ const Home = () => {
                 <br />
                 <br />
                 <button class='homeButton'><Link to='feed'>View Stellar Feed</Link></button>
+                <br />
+                <br />
+                <button class='homeButton' onClick={() => auth.signOut()}>Sign Out</button>
 
             </center>
         </>
