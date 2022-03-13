@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 //firebase imports below`
 import { doc, getFirestore, setDoc, addDoc, collection } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth';
@@ -44,6 +45,9 @@ const Post = () => {
 
                 <button class='createPost' onClick={handleMessageSend}>Create Post!</button>
                 <br />
+                <button class='homeButton'><Link to='/'>Go to home page</Link></button>
+                <br />
+                <button class='homeButton'><Link to='/feed'>View Stellar Feed</Link></button>
             </center>
         </>
     )
