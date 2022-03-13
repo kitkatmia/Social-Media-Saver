@@ -16,8 +16,10 @@ const Login = () => {
 
     return (
         <>
-            <button onClick={handleLogin}>Login with Google</button>
-            {/* button that will sign in with google on click*/}
+            <div class="container">
+                {/* button that will sign in with google on click*/}
+                <button class="loginButton" onClick={handleLogin}>Login with Google</button>
+            </div>
         </>
     )
 }

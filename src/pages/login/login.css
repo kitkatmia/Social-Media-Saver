@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginButton {
+    height: 6vh;
+    width: 60vh;
+    position: relative;
+    background: rgb(169, 217, 255);
+    background: radial-gradient(circle, rgba(169, 217, 255, 1) 0%, rgba(183, 174, 255, 1) 27%, rgba(255, 202, 255, 1) 57%, rgba(255, 200, 201, 1) 100%);
+    /* background: radial-gradient(circle, rgba(120, 196, 255, 1) 0%, rgba(132, 119, 255, 1) 27%, rgba(255, 119, 255, 1) 57%, rgba(255, 123, 125, 1) 100%); */
+    background-size: 1000% 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
+    animation: Gradient 50s ease infinite;
+    text-decoration: none;
+}
+
+.loginButton:hover {
+        mix-blend-mode: difference;
+    }
+
+@keyframes Gradient {
+    100% {
+        background-position: 400% 50%;
+    }
+}
