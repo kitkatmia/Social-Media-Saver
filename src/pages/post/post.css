@@ -87,11 +87,6 @@
     padding: 5px 0;
     background: transparent;
     transition: border-color .2s;
-    /* CODE FROM SANDVOX */
-    /* min-width:50px !important;
-    max-width:99.99% !important;
-    transition: width 0.25s;
-    text-align:center; */
 }
 
 .form__field::placeholder {
@@ -104,6 +99,7 @@
 }
 
 .form__label {
+    margin-left: -135px;
     position: absolute;
     top: 0;
     display: block;
@@ -113,7 +109,7 @@
 }
 
 .form__field:focus {
-    padding-bottom: 5px;
+    padding-bottom: 2px;
     /* weight doesn't do anything */
     /* font-weight: 900;  */
     border-width: 2px;
@@ -122,8 +118,9 @@
 }
 
 .form__field:focus~.form__label {
+    margin-left: -155px;
     position: absolute;
-    top: -3px;
+    top: -8px;
     display: block;
     transition: 0.222s;
     font-size: 1rem;
@@ -146,6 +143,5 @@ body {
     /* justify-content: center; */
     align-items: center;
     min-height: 100vh;
-    /* font-size: 1.5rem; */
-    /* background-color: #222222; */
+
 }
