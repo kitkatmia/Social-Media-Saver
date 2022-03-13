@@ -73,7 +73,6 @@ const Feed = () => {
                         })
                     }
                 </div>
-
             </center>
         </>
     )
