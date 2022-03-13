@@ -44,7 +44,6 @@ const Post = () => {
 
                 <button class='createPost' onClick={handleMessageSend}>Create Post!</button>
                 <br />
-                {/* <button onClick={() => auth.signOut()}>Sign Out</button> */}
             </center>
         </>
     )
