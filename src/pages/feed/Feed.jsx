@@ -59,17 +59,20 @@ const Feed = () => {
                 <h1>Feed</h1>
                 <br />
                 {/* go through every object in the array and pass in all the document data */}
-                {
-                    feedArray.map((post, index) => {
+                <div class='posts'> 
+                    {
+                        feedArray.map((post, index) => {
+                            console.log(post)
 
-                        return (
-                            <span key={index}>
-                                <SingularPost deleteFunction={handleDelete} docStuff={post} />
-                                <br />
-                            </span>
-                        )
-                    })
-                }
+                            return (
+                                <span key={index}>
+                                    <SingularPost deleteFunction={handleDelete} docStuff={post} />
+                                    <br />
+                                </span>
+                            )
+                        })
+                    }
+                </div>
 
             </center>
         </>

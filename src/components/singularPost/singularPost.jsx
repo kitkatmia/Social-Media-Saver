@@ -40,7 +40,7 @@ const SingularPost = ({ docStuff, deleteFunction }) => {
                 <h3>{message}</h3>
                 <div className='authorButton-container'>
                     <p>{author}</p>
-                    <button onClick={handleLike}>{likes} {'<3'}</button>
+                    <button id='likeButton' onClick={handleLike}>{likes} {'Likes'}</button>
                     {authorUID === auth.currentUser.uid && <button onClick={()=>deleteFunction(docStuff.id)}>Delete Post</button>}
                 </div>
             </div>

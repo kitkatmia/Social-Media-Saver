@@ -1,12 +1,13 @@
 .singular-post-container {
     width: 50vw;
     padding: 10px;
-    border: 3px solid black
+    /* border: 3px solid black */
+    background-color: #d4dfff;
+    border-radius: 25px;
 }
 
 .authorButton-container {
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,3 +16,70 @@
 .authorButton-container>* {
     margin: auto 15px;
 }
+
+/* LIKE BUTTON */
+#likeButton {
+    width: 70px;
+    height: 20px;
+    border: 1px solid black;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background: #e0e0e0;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+#likeButton:before {
+    content: '';
+    background: linear-gradient(45deg, rgba(120, 196, 255, 1) 0%, rgba(132, 119, 255, 1) 27%, rgba(255, 119, 255, 1) 57%, rgba(255, 123, 125, 1) 100%);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+#likeButton:active {
+    color: #000
+}
+
+#likeButton:active:after {
+    background: transparent;
+}
+
+#likeButton:hover:before {
+    opacity: 1;
+}
+
+#likeButton:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e0e0e0;
+    left: 0;
+    top: 0;
+    /* border-radius: 10px; */
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+} 

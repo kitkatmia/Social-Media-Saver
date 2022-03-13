@@ -1,0 +1,5 @@
+.posts {
+    color: #242423;
+    display: flex;
+    flex-wrap: wrap;
+}
